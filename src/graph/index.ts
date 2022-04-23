@@ -21,11 +21,7 @@ export class Graph {
     return this._accuracy
   }
 
-  public fixed(v: number) {
-    return Number(v.toFixed(this.accuracy))
-  }
-
   public isEquel(a: number, b: number) {
-    return Math.abs(this.fixed(a) - this.fixed(b)) < this.accuracy
+    return Math.abs(a - b) < this.accuracy
   }
 }

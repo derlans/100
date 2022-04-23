@@ -10,3 +10,8 @@ export function polar2cart(x: number, y: number, rad: number, length: number) {
     ny,
   }
 }
+export function createNaiveMeta(): void {
+  const meta: HTMLMetaElement = document.createElement('meta')
+  meta.name = 'naive-ui-style'
+  document.head.appendChild(meta)
+}

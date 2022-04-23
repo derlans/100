@@ -87,7 +87,7 @@ export class Line extends Graph {
    */
   public isPointOnLine(point: Point) {
     const { A, B, C } = this
-    return this.isEquel(A * point.x + B * point.y + C, 0)
+    return this.isEquel((A * point.x + B * point.y + C) / (A ** 2 + B ** 2) ** 0.5, 0)
   }
 
   /**
