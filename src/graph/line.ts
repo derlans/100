@@ -1,5 +1,5 @@
 import { Point } from './point'
-import { Graph } from '.'
+import { Graph } from './base'
 export type PositionToLine='intersect' | 'parallel'
 export class Line extends Graph {
   public A: number
@@ -33,6 +33,15 @@ export class Line extends Graph {
   }
 
   /**
+   *
+   * @description 从斜率和一个点求直线
+   */
+  static fromABPoint(A: number, B: number, point: Point) {
+    const C = -A * point.x - B * point.y
+    return new Line(A, B, C)
+  }
+
+  /**
    * @description 求该支线关于参数直线的对称直线
    */
   public getSymmetricLine(line: Line) {
@@ -44,6 +53,16 @@ export class Line extends Graph {
     const B = B1 * squareSum - 2 * scalarProduct * B2
     const C = C1 * squareSum - 2 * scalarProduct * C2
     return new Line(A, B, C)
+  }
+
+  /**
+   *
+   * @description 求过该点的垂线
+   */
+  public getVerticalLine(point: Point) {
+    const A = this.A
+    const B = -this.B
+    return Line.fromABPoint(A, B, point)
   }
 
   /**

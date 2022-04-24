@@ -1,4 +1,4 @@
-import { Graph } from '.'
+import { Graph } from './base'
 
 export class Point extends Graph {
   constructor(public x: number, public y: number) {

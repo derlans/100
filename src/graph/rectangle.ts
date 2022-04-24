@@ -1,7 +1,7 @@
 import type { Line } from './line'
 import { LineSegment } from './lineSegment'
 import { Point } from './Point'
-import { Graph } from '.'
+import { Graph } from './base'
 export type OnRectangleSide = 'top' | 'right' | 'bottom' | 'left'
 export class Rectangle extends Graph {
   constructor(public x: number, public y: number, public width: number, public height: number) {
