@@ -18,4 +18,9 @@ export const works: Work[] = [{
   path: '/gravitation',
   title: '引力',
 },
+{
+  name: 'algorithm-visualization',
+  path: '/algorithm-visualization',
+  title: '算法可视化',
+},
 ]
