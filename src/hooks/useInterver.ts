@@ -19,6 +19,7 @@ export function useInterver(func: Function, _interver: number, options?: useInte
   }
   const pause = () => {
     clearTimeout(timer)
+    isActive.value = false
   }
   const resume = () => {
     isActive.value = true

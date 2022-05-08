@@ -13,4 +13,9 @@ export const works: Work[] = [{
   path: '/reflex',
   title: '反射',
 },
+{
+  name: 'gravitation',
+  path: '/gravitation',
+  title: '引力',
+},
 ]

@@ -9,6 +9,7 @@
     "test": "vitest"
   },
   "dependencies": {
+    "lodash": "^4.17.21",
     "vitest": "^0.9.4",
     "vue": "^3.2.25",
     "vue-router": "4"

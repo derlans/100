@@ -3,6 +3,9 @@
 </template>
 
 <style>
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 #app {
   min-height: 100vh;
   width: 100%;
