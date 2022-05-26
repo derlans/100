@@ -31,3 +31,11 @@ export function debounce(fn: Function, delay: number, immediate = false) {
       fn.apply(this, args)
   }
 }
+
+export function createPromise(time: number, value?: any) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(value)
+    }, time)
+  })
+}
