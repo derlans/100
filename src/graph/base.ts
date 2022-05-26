@@ -1,6 +1,6 @@
 export interface GraphOpations{
   accuracy?: number
-  name: string
+  name?: string
 }
 export class Graph {
   private _accuracy: number
