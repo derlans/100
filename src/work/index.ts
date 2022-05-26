@@ -23,4 +23,9 @@ export const works: Work[] = [{
   path: '/algorithm-visualization',
   title: '算法可视化',
 },
+{
+  name: 'polygon',
+  path: '/polygon',
+  title: '多边形绘制',
+},
 ]
