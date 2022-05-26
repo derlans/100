@@ -1,0 +1,32 @@
+import { describe, expect, it } from 'vitest'
+import { Point } from '../point'
+describe('Point', () => {
+  it('base', () => {
+    const point1 = new Point(1, 1)
+    expect(point1.x).toEqual(1)
+    expect(point1.y).toEqual(1)
+    expect(point1.name).toEqual('Point')
+    expect(point1.isPointEquel(new Point(1, 1))).toBeTruthy()
+  })
+  it('getNextPoint', () => {
+    const point1 = new Point(1, 1)
+    const point2 = point1.getNextPoint(45, 2 * 2 ** 0.5)
+    expect(point2.isPointEquel(new Point(3, 3))).toBeTruthy()
+    const point3 = point1.getNextPoint(0, 1)
+    expect(point3.isPointEquel(new Point(2, 1))).toBeTruthy()
+    const point4 = point1.getNextPoint(90, 1)
+    expect(point4.isPointEquel(new Point(1, 2))).toBeTruthy()
+    const point5 = point1.getNextPoint(180, 1)
+    expect(point5.isPointEquel(new Point(0, 1))).toBeTruthy()
+    const point6 = point1.getNextPoint(270, 1)
+    expect(point6.isPointEquel(new Point(1, 0))).toBeTruthy()
+    const point7 = point1.getNextPoint(360, 1)
+    expect(point7.isPointEquel(new Point(2, 1))).toBeTruthy()
+    const point8 = point1.getNextPoint(450, 1)
+    expect(point8.isPointEquel(new Point(1, 2))).toBeTruthy()
+    const point9 = point1.getNextPoint(-45, 2 * 2 ** 0.5)
+    expect(point9.isPointEquel(new Point(3, -1))).toBeTruthy()
+    const point10 = point1.getNextPoint(10000, 0)
+    expect(point10.isPointEquel(point1)).toBeTruthy()
+  })
+})
